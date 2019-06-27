@@ -1,3 +1,3 @@
 print("Lua script loaded ...")
 require("luaCommon")
-print(luaC_sum(15, 3, 2))
+print("result =", luaC_sum(1, 2, 3))
