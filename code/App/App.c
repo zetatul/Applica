@@ -6,10 +6,18 @@
 #include <lua.h>
 #include <lualib.h>
 #include <lauxlib.h>
+#include <Windows.h>
+
+char _bufer[256];
+char *_rus(const char *_text)
+{
+	CharToOemA(_text, _bufer);
+	return _bufer;
+}
 
 int main()
 {
-    printf("App load ...\n");
+    printf(_rus("App запущено ...\n"));
 
 	lua_State *lua_VM = luaL_newstate();
 	luaL_openlibs(lua_VM);
