@@ -20,6 +20,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "luaCommon", "code\LuaCommon
 		{FB91CE1F-7A6B-4D1E-A0FD-BDE853FBAF3D} = {FB91CE1F-7A6B-4D1E-A0FD-BDE853FBAF3D}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QtApp", "code\QtApp\QtApp.vcxproj", "{0C472D07-470C-323A-95E0-7D58CA6FBF46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -52,6 +54,12 @@ Global
 		{9B311DEC-D838-4574-AED3-CE38999D6A09}.Release|x64.Build.0 = Release|x64
 		{9B311DEC-D838-4574-AED3-CE38999D6A09}.Release|x86.ActiveCfg = Release|Win32
 		{9B311DEC-D838-4574-AED3-CE38999D6A09}.Release|x86.Build.0 = Release|Win32
+		{0C472D07-470C-323A-95E0-7D58CA6FBF46}.Debug|x64.ActiveCfg = Debug|Win32
+		{0C472D07-470C-323A-95E0-7D58CA6FBF46}.Debug|x86.ActiveCfg = Debug|Win32
+		{0C472D07-470C-323A-95E0-7D58CA6FBF46}.Debug|x86.Build.0 = Debug|Win32
+		{0C472D07-470C-323A-95E0-7D58CA6FBF46}.Release|x64.ActiveCfg = Release|Win32
+		{0C472D07-470C-323A-95E0-7D58CA6FBF46}.Release|x86.ActiveCfg = Release|Win32
+		{0C472D07-470C-323A-95E0-7D58CA6FBF46}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

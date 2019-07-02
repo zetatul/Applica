@@ -3,10 +3,11 @@
 
 #include "pch.h"
 #include <stdio.h>
-#include <lua.h>
-#include <lualib.h>
-#include <lauxlib.h>
 #include <Windows.h>
+#include "../sdk/lua/lua.h"
+#include "../sdk/lua/lualib.h"
+#include "../sdk/lua/lauxlib.h"
+
 
 char _bufer[256];
 char *_rus(const char *_text)
@@ -15,13 +16,40 @@ char *_rus(const char *_text)
 	return _bufer;
 }
 
-int main()
+int (*QtForm)(int, char**);
+
+int main(int argc, char **argv)
 {
+	DWORD err;
+	HMODULE hDll = LoadLibrary(L"QtApp.dll");
+	
     printf(_rus("App запущено ...\n"));
 
 	lua_State *lua_VM = luaL_newstate();
 	luaL_openlibs(lua_VM);
 	luaL_dofile(lua_VM, "../script/test.lua");
+	
+	if (hDll != NULL)
+	{
+		printf(_rus("QtApp.dll загружена... \n"));
+		QtForm = (int(*)(int, char**)) GetProcAddress(hDll, "initApp");
+		if (QtForm != NULL)
+		{
+			(*QtForm)(argc, argv);
+		}
+		else
+		{
+			printf(_rus("Неудалось загрузить функцию из библиотеки\n"));
+		}
+	}
+	else
+	{
+		err = GetLastError();
+		printf(_rus("Немогу загрузить QtApp.dll. Код ошибки:"), " %d", err);
+	}
+
+	
+	FreeLibrary(hDll);
 	lua_close(lua_VM);
 
 	return 0;
