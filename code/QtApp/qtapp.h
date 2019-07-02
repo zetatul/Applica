@@ -5,14 +5,4 @@
 #include "qtapp_global.h"
 #include <qapplication.h>
 
-
-/*
-class  QTAPPSHARED_EXPORT QtApp
-{
-
-public:
-    QtApp();
-};
-*/
-
 #endif // QTAPP_H

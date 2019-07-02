@@ -183,12 +183,14 @@
     </QtUic>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="console.cpp" />
     <ClCompile Include="consoleline.cpp" />
     <ClCompile Include="qtapp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="consoleline.h">
     </QtMoc>
+    <ClInclude Include="console.h" />
     <ClInclude Include="qtapp.h" />
     <ClInclude Include="qtapp_global.h" />
   </ItemGroup>
