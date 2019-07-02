@@ -8,14 +8,3 @@ extern "C" __declspec(dllexport) int initApp(int argc, char **argv)
 
     return App.exec();
 }
-
-
-
-
-
-
-
-/*QtApp::QtApp()
-{
-}
-*/
