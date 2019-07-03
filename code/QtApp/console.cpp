@@ -31,7 +31,7 @@ bool Console::parseCommandLine(std::string commandLine)
 {
 	std::ostringstream out;
 	std::string::size_type index = 0;
-	std::vector<std::string> argument;
+	std::vector<std::string> arguments;
 	std::list<ConsoleItem>::const_iterator iter;
 
 	//add to text buffer
@@ -270,7 +270,7 @@ void Console::setOutputBufferSize(int size)
 	}
 }
 
-void Console::setCommandBefferSize(int size)
+void Console::setCommandBufferSize(int size)
 {
 	commandBufferSize = size;
 
